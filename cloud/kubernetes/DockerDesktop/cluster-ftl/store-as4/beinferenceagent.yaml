@@ -1,0 +1,33 @@
+#
+# Copyright (c) 2019. TIBCO Software Inc.
+# This file is subject to the license terms contained in the license file that is distributed with this file.
+#
+
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: "beinferenceagent"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: "beinferenceagent"
+    spec:
+      containers:
+      - name: "beinferenceagent-container"
+        image: "s2ifdcftlsas4:01"
+        imagePullPolicy: "Never"
+        ports:
+          - containerPort: 47500
+        env:
+          - name: PU
+            value: "default"
+          - name: FTL_gv_REALM_SERVER
+            value: "http://192.168.2.3:8585"
+          - name: FTL_gv_APP_NAME
+            value: "cepFTLApp"
+          - name: FTL_gv_CLUSTER_NAME
+            value: "cepFTLCluster"
+          - name: STORE_gv_AS4_REALM_SERVER
+            value: "http://192.168.2.3:30080"
