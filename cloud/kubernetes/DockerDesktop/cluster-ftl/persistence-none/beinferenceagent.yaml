@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: "beinferenceagent-container"
-        image: "s2ifdftl:01"
+        image: "s2ifdcftl:01"
         imagePullPolicy: "Never"
         env:
           - name: PU
