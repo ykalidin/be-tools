@@ -185,4 +185,10 @@ aws-efs:
   replicaCount: 1
   efsProvisioner:
     efsFileSystemId: fs-e8f5fa68
-    awsRegion: us-east-1        
+    awsRegion: us-east-1
+
+#***************Required for testing using helm charts(helm test <releaseName>)**********************************    
+testFramework:
+  image: "helmtest:latest"
+  testScript: "./test.sh"
+  commands: /bin/bash   

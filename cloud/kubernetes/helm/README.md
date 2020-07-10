@@ -4,14 +4,6 @@
 
 This chart installs Business Events application deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
-## Dependencies:
-
-1. [MySQL chart](https://github.com/kubernetes/charts/tree/master/stable/mysql): It installs MySQL deployment for the database requirements of the backingstore BE applications. 
-2. [efs-provisioner chart](https://github.com/helm/charts/tree/master/stable/efs-provisioner): Used to fulfill PersistentVolumeClaims with EFS PersistentVolumes for the BE applications.
-
-The persisent volumes are created as folders with in an AWS EFS filesystem.
-
-https://aws.amazon.com/efs/
 
 ## Prerequisites Details
 
@@ -25,7 +17,14 @@ https://aws.amazon.com/efs/
 * http://kubernetes.io/docs/concepts/abstractions/controllers/statefulsets/
 * https://kubernetes.io/docs/concepts/storage/persistent-volumes/
 
-## Installing the Chart
+## Dependencies:
+
+The below listed dependency charts were included in BE helm scripts.
+
+1. [MySQL chart](https://github.com/kubernetes/charts/tree/master/stable/mysql): It installs MySQL deployment for the database requirements of the backingstore BE applications. 
+2. [efs-provisioner chart](https://github.com/helm/charts/tree/master/stable/efs-provisioner): Used to fulfill PersistentVolumeClaims with EFS PersistentVolumes for the BE applications.
+
+# Installing the Chart
 
 Clone be-tools repo and navigate to cloud/kubernetes folder
 
@@ -77,6 +76,25 @@ At any point to check how to use helm, simply run the `help` command
 helm --help
 ```
 
+## Testing 
+
+### Uisng BE example
+
+Please refer to readme file in examples section of BE package.
+
+### Using helm Chart
+
+Update docker image name which has curl installed in testframework section before installing chart. You can test the helm chart by executing :
+
+```
+helm test my-release
+```
+
+* If all the tests were succeeded, test pod gets deleted.<br>
+* If any of test were failed. Pod will remain as it is, please check test pod logs for the errors.
+
+Note: Currently BE helm tests is limited to http(s) protocols.
+
 ## Uninstalling the Chart
 
 To uninstall/delete the my-release deployment:
@@ -85,4 +103,4 @@ To uninstall/delete the my-release deployment:
 $ helm delete my-release
 ```
 
-The command removes all the Kubernetes components associated with the chart
+The command removes all the Kubernetes components associated with the chart.

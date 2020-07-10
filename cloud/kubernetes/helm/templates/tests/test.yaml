@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ template "beinferenceagent.fullname" . }}-test
+  labels:
+    app: {{ template "beinferenceagent.fullname" . }}
+    release: "{{ .Release.Name }}"
+  annotations:
+    "helm.sh/hook": test-success
+    "helm.sh/hook-delete-policy": hook-succeeded
+spec:
+  {{- if .Values.imagePullSecrets }}
+  imagePullSecrets:
+    - name: {{ . }}
+  {{- end }}
+  containers:
+    - name: {{ .Release.Name }}-test
+      image: "{{ .Values.testFramework.image }}"
+      imagePullPolicy: "{{ .Values.imagePullPolicy}}"
+      command: ["{{ .Values.testFramework.commands }}"] 
+      args: ["{{ .Values.testFramework.testScript }}","{{ include "testing.beinferenceagent.fullname" . }}"]
+  restartPolicy: Never

@@ -223,3 +223,7 @@ Create a openshift NFS path details for sharedNothing and store
     server: {{ .Values.persistentvolumes.openshift.volume.nfs.server }}
     path: {{ .Values.persistentvolumes.openshift.volume.nfs.sapath }}
 {{- end -}}
+
+{{- define "testing.beinferenceagent.fullname" -}}
+http://{{ include "beservice.fullname" . }}:{{ .Values.beservice.ports.port }}
+{{- end -}}
