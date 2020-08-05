@@ -133,7 +133,7 @@ Create the cluster using following command. This may take around ~30 mins to cre
    --worker-subnet worker-subnet
 ```
 ### Connect to Cluster
-* Get login credential of the OpenShift cluster you have created in the previous step.<br> Run following command:
+* Get login credentials of the OpenShift cluster you have created in the previous step.<br> Run following command:
 ```
   az aro list-credentials \
    --name $CLUSTER \

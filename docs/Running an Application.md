@@ -4,7 +4,6 @@ You can deploy a TIBCO BusinessEvents application in the Kubernetes cluster.
 
 ## Prereqisites
 
-*  See [Preparing for TIBCO BusinessEvents Containerization](Before%20You%20Begin)
 *  Docker image of your TIBCO BusinessEvents application. See [Building TIBCO BusinessEvents Application Docker Image](Building%20TIBCO%20BusinessEvents%20Application%20Docker%20Image).
 
 *  Push the TIBCO BusinessEvents application Docker image to respective cloud Container Registry.

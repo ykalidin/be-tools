@@ -38,7 +38,7 @@ To monitor TIBCO BusinessEvents applications running on kubernetes cluster, run 
     ```
     kubectl create -f k8s-authorization.yaml
 
-    kubectl create -f beteagentdeploymemt.yaml
+    kubectl create -f beteagentdeployment.yaml
 
     kubectl create -f beteagentinternalservice.yaml
 
@@ -52,12 +52,12 @@ To monitor TIBCO BusinessEvents applications running on kubernetes cluster, run 
     kubectl logs <pod>
     ```
 
-    For example, use the `kubectl get` command to get the list of pods and then use the `kubectl logs` command to view logs of `beteagentdeploymemt`.
+    For example, use the `kubectl get` command to get the list of pods and then use the `kubectl logs` command to view logs of `beteagentdeployment`.
 
     ```
     kubectl get pods
 
-    kubectl logs beteagentdeploymemt-86d75d5fbc-z9gqt
+    kubectl logs beteagentdeployment-86d75d5fbc-z9gqt
     ```
 
 

@@ -15,7 +15,7 @@
     ```
     kubectl create -f manifest.yaml
     ```
-* For Azure cluster with azure file storageclass deploy the files
+* For Azure cluster with `azure file storageclass` deploy the files
 
     ```
     kubectl create -f manifest.yaml
@@ -72,6 +72,6 @@
 
 ## Testing
 
-  * see [Testing](Testing.md)
+  * See [Testing](Testing.md)
 
 **Parent topic:**[Running an Application](Running%20an%20Application)

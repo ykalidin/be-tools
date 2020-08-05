@@ -4,8 +4,8 @@ You can run any TIBCO BusinessEvents application on Microsoft Azure based Kubern
 
 Microsoft Azure provides two storage options for persistent volumes:
 
--   *Azure Disks* - available for access to single node with the ReadWriteOnce privilege.
--   *Azure Files* - available for access to multiple nodes and pods.
+-   *Azure Disks* - Available for access to single node with the ReadWriteOnce privilege.
+-   *Azure Files* - Available for access to multiple nodes and pods.
 
 For more information about Kubernetes concepts and Microsoft Azure, see [Azure Kubernetes Service documentation](https://docs.microsoft.com/en-us/azure/aks/).
 

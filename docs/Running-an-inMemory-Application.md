@@ -1,7 +1,6 @@
 # Running an inMemory Application
 
 * For this deployment, the sample YAML files are available at BE_HOME->cloud->kubernetes->cloud_name->inmemory
-* For details about these sample YAML files, see [Sample Kubernetes YAML Files for Applications without Backing Store](Sample%20YAML%20Files%20for%20Applications%20without%20a%20Backing%20Store#)
 
 * Your TIBCO BusinessEvents application Docker image must be uploaded to respective cloud Container Registry.
 
@@ -31,6 +30,6 @@
 
 ## Testing
 
-* see [Testing](Testing.md)
+* See [Testing](Testing.md)
 
 **Parent topic:** [Running an Application](Running%20an%20Application)

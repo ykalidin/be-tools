@@ -29,7 +29,7 @@ For more information about commands used in the following procedure, see [Micros
 
 4.  To use the TIBCO BusinessEvents application container image with Azure Container Registry, tag the image with the login server address of your registry.
 
-    1.  View the list of your local image by using the docker images command.
+    1.  View the list of your local images by using the docker images command.
 
         ```
         $ docker images
@@ -45,7 +45,7 @@ For more information about commands used in the following procedure, see [Micros
         az acr list --resource-group <resource_group_name> --query "[].{acrLoginServer:loginServer}" --output table
         ```
 
-    3.  Tag your application image with login server address of your registry from the earlier step. This creates an alias of the application image with a fully qualifies path to your registry.
+    3.  Tag your application image with login server address of your registry from the earlier step. This creates an alias of the application image with a fully qualified path to your registry.
 
         ```
         docker tag fdcache <registry_login_server>/fdcache:01

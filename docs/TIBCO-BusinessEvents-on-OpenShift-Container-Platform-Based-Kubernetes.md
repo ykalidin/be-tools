@@ -1,3 +1,4 @@
+# OpenShift Container Platform Based Kubernetes
 
 You can run any TIBCO BusinessEvents application on OpenShift Container Platform based Kubernetes cluster and monitor them by using TIBCO BusinessEvents Enterprise Administrator Agent. You can also manage business rules through WebStudio by running RMS on OpenShift Container Platform based Kubernetes cluster.
 
@@ -6,12 +7,12 @@ For details, see [OpenShift Container Platform documentation](https://docs.opens
 ## Kubernetes Environment Setup
 
 * Setup [Azure OpenShift Cluster](Setting-Up-the-OpenShift-Container-Platform-CLI-Environment)
-* create [container registry](Setting%20Up%20an%20Azure%20Container%20Registry)
+* Create [container registry](Setting%20Up%20an%20Azure%20Container%20Registry)
 
 Note: For Openshift cluster deployments, you can use `oc` or `kubectl` cli for deployments to cluster.
 
 
-## Backing Store persistence setup 
+## Backing Store setup 
 
 ### Procedure
 

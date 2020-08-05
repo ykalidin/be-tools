@@ -27,7 +27,7 @@ The Kubernetes cluster must be up and Running
      <property name="ProjectName.QA.ws.jmx.agentName" value="inference-class"/>
     ```
 
-    For more informationabout hot deployment property group, see the "RMS Server Configuration Property Reference" section in *TIBCO BusinessEvents WebStudio Users Guide*.
+    For more information about hot deployment property group, see the "RMS Server Configuration Property Reference" section in *TIBCO BusinessEvents WebStudio Users Guide*.
 
     Alternatively, you can add these JMX connection details for the project from the **Settings** page in TIBCO BusinessEvents WebStudio. For details, see *TIBCO BusinessEvents WebStudio Users Guide*.
 
@@ -68,6 +68,7 @@ The Kubernetes cluster must be up and Running
     ```
     kubectl create -f manifest_gcp.yaml
     kubectl create -f persistent-volume-claims.yaml
+    kubectl create -f gcp-project-pvc.yaml
     ```
     * For OpenShift cluster deploy the files
     ```
@@ -81,7 +82,7 @@ The Kubernetes cluster must be up and Running
     kubectl create -f berms-persistent-volume-claims.yaml
     ```
 
-    * For AWS cluster deploy the [files](Running%20RMS%20Applications%20in%20Kubernetes)
+    * For AWS cluster deploy the [files](AWS%20EFS%20file%20system)
 
     * For minikube cluster deploy the files
     ```

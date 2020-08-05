@@ -10,7 +10,7 @@
   * [TEA](Building%20TIBCO%20BusinessEvents%20Enterprise%20Administrator%20Agent%20Docker%20Image)
   * [BE App to use Global Variables from consul](Setting%20Up%20the%20Application%20to%20Use%20Global%20Variables%20from%20Consul)
   * [Docker run](Docker%20Run%20Command%20Reference)
-  * [Multihost Clustering on Amazon EC2 Instances Using Docker](Setting-Up-BusinessEvents-Multihost-Clustering-on-Amazon-EC2-Instances-Using-Docker)
+  * [Multihost Clustering on AWS EC2 Using Docker](Setting-Up-BusinessEvents-Multihost-Clustering-on-Amazon-EC2-Instances-Using-Docker)
 * [Kubernetes](Kubernetes)
   * [Cluster Setup](TIBCO-BusinessEvents-on-Kubernetes)
     * [AWS](kubernetes-aws)

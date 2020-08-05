@@ -39,6 +39,6 @@
 
 ## Testing
 
-* see [Testing](Testing.md)
+* See [Testing](Testing.md)
 
 **Parent topic:** [Running an Application](Running%20an%20Application)

@@ -53,6 +53,7 @@ Following table illustrates how to use helm switches to select particular deploy
 * Update the required values in values.yaml.(ex: image,imagePullPolicy etc..,)
 * For setting up local mysql database, update mysql->enabled to true in values.yaml
 * For setting up AWS EFS file storage, update aws-efs->enabled to true in values.yaml
+* If you are using external servers(FTL) or databases(ex: MySQL, Cassandra), make sure that the url's are reachable by the cluster.  
 * If you are using global variable group in cdd file, instead of the slash '`/`' delimiter between global variable group name and global variable name, use "`_gv_`". For example, `port` is a global variable which is part of the `VariableGP` global variable group, then instead of using `VariableGP/port` in values.yaml file, use `VariableGP_gv_port`. Also, ensure that you do not use the "`gv`" token in any global variable group name or global variable name.
 
 To install the chart with the release name `my-release` in azure
@@ -81,7 +82,7 @@ The command removes all the Kubernetes components associated with the chart
 
 ## Testing
 
-* see [Testing](Testing.md)
+* See [Testing](Testing.md)
 
 ## Additional Information
 

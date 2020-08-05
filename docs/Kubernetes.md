@@ -1,6 +1,6 @@
 # Introduction
 
-This page details about content related to kubernetes for TIBCO BusinessEvents
+This page describes Kubernetes setup and deployments for TIBCO BusinessEvents
 
 * [Cluster Setup](TIBCO-BusinessEvents-on-Kubernetes)
 * [Deployments](deployments)

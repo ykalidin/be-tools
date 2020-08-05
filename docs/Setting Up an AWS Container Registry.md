@@ -3,16 +3,16 @@
 Amazon AWS uses the AWS Container Registry for securely building and deploying your applications.
 
 
--   Docker image of the TIBCO BusinessEvents application that you want to deploy to the Kubernetes cluster, see [Building TIBCO BusinessEvents Application Docker Image](Building%20TIBCO%20BusinessEvents%20Application%20Docker%20Image#).
+- For TIBCO BusinessEvents application docker image that you want to deploy to the Kubernetes cluster, see [Building TIBCO BusinessEvents Application Docker Image](Building%20TIBCO%20BusinessEvents%20Application%20Docker%20Image#).
 
 ## Registry setup
-* Create the docker repository in AWS by running following command:
+* Create the docker repository in AWS by running the following command:
 
 ```
 aws ecr create-repository --repository-name <repository-name>
 ```
 
-* Tag the created image by running following command
+* Tag the created image by running the following command
 
 ```
 docker tag fdcache:01 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repository-name>:01
@@ -20,7 +20,7 @@ docker tag fdcache:01 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/<repositor
 
 ## Push Image
 
-* Run following command to get docker login details:
+* Run the following command to get docker login details:
 ```
 aws ecr get-login --no-include-email
 ```

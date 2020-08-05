@@ -80,7 +80,7 @@ To access Docker images in the Google Container Registry from an environment oth
 
 
 # Docker container registry
-We can use either VMware Harbor registry or Google Container Registry.
+We can use either Google Container Registry or VMware Harbor registry.
 
 ## Google Container Registry
 First create service account for container registry and create secret for pulling image from kubernetes.

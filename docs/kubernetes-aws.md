@@ -19,4 +19,4 @@ Create an Amazon RDS based instance and configure it to connect to a TIBCO Busin
 
 ## Setup EFS file system
 
-* Create an EFS file system [here](Running%20RMS%20Applications%20in%20Kubernetes)
+* Create an EFS file system [here](AWS%20EFS%20file%20system)

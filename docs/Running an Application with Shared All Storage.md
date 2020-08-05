@@ -7,13 +7,55 @@
 
 1.  Create the Kubernetes object specification \(`.yaml`\) files based on your deployment requirement.
 
+
     For details about describing a Kubernetes object in a YAML file, see [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/). 
+
+* For AWS cluster deploy the files
+
+    ```
+    kubectl create -f db-configmap.yaml
+    ```
+* For PKS cluster deploy the files
+
+    ```
+    kubectl create -f db-configmap.yaml
+    ```    
+* For Azure cluster deploy the files
+    * `azure db`
+
+    ```
+    kubectl create -f db-configmapdocker.yaml
+    ```
+    * `azure mysqldockerimage`
+
+    ```
+    kubectl create -f db-configmapmysql.yaml
+    kubectl create -f mysql.yaml
+    kubectl create -f mysql-service.yaml
+    ```    
+
+* For OpenShift deploy the files
+
+    ```
+    kubectl create -f db-configmap.yaml
+    kubectl create -f mysql.yaml
+    kubectl create -f mysql-service.yaml
+    kubectl create -f persistent-volume-and-claim.yaml
+    ```
+* For minikube deploy the files
+
+    ```
+    kubectl create -f db-configmap.yaml
+    kubectl create -f mysql-service.yaml
+    kubectl create -f persistent-volume.yaml
+    kubectl create -f Statefulsets-mysql.yaml
+    ```        
 
 * For example, create the following Kubernetes objects by using the sample YAML files mentioned in [Sample Kubernetes YAML Files for Applications with Shared All Persistence](Sample%20Kubernetes%20Resource%20Files%20for%20Shared%20All%20Storage#).
 
     ```
 
-    kubectl create -f db-configmap.yaml
+    
 
     kubectl create -f bediscoverynode.yaml
 
@@ -59,6 +101,6 @@
 
 ## Testing
 
-* see [Testing](Testing.md)
+* See [Testing](Testing.md)
 
 **Parent topic:**[Running an Application](Running%20an%20Application)
